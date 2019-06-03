@@ -1,14 +1,12 @@
-from io import BytesIO
 import logging
-from PIL import Image
-from django.contrib.auth.signals import user_logged_in
-from django.core.files.base import ContentFile
-from django.db.models.signals import pre_save, post_save
-from django.dispatch import receiver
-from django.conf import settings
-from rest_framework.authtoken.models import Token
+from io import BytesIO
 
-from .models import ProductImage, Basket, OrderLine, Order
+from PIL import Image
+from django.core.files.base import ContentFile
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+
+from .models import ProductImage
 
 THUMBNAIL_SIZE = (300, 300)
 
