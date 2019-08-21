@@ -11,4 +11,5 @@ urlpatterns = [
     path('about-us/',TemplateView.as_view(template_name="about_us.html")),
     path( "",TemplateView.as_view(template_name="home.html")),
     path("product/<slug:slug>/", DetailView.as_view(model=models.Product), name="product",),
+    path('signup/', views.SignupView.as_view(), name="signup"),
 ]
